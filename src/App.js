@@ -8,10 +8,19 @@ class App extends Component {
 
     this.state = {
       main: {},
+      coords: {},
+      weather: {},
+      wind: {},
+      sys: {},
       city: "London"
     };
   }
+
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = () => {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${
         this.state.city
@@ -22,30 +31,37 @@ class App extends Component {
       })
       .then(obj => {
         const main = obj.main;
-        const one = [1, 2, 3, 4, 5, 6];
-
-        var obiekt = { klucz1: "wartosc1",klucz2: "wartosc1", klucz1: "wartosc1",klucz2: "wartosc1" };
-        var args = [...obiekt];
-        console.log(args)
-        // TypeError: obiekt is not iterable
+        const coords = obj.coord;
+        const weather = obj.weather[0];
+        const wind = obj.wind;
+        const sys = obj.sys;
 
         this.setState({
-          main
+          main,
+          coords,
+          weather,
+          wind,
+          sys
         });
-        // console.log(this.state);
-
-        // console.log(this.state.main.temp);
-        // console.log(this.state.main.pressure);
-        // console.log(this.state.main.humidity);
-        // console.log(this.state.main.temp_min);
-        // console.log(this.state.main.temp_max);
+        console.log(this.state)
       });
-  }
+  };
+
+  handler = e => {
+    this.setState({
+      city: e.target.value
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <h1>dff</h1>
+        <input value={this.state.city} onChange={this.handler} type="text" />
+        <button onClick={this.fetchData} type="submit">
+          submit button
+        </button>
+        <h1>Country: {this.state.sys.country}</h1>
+        <h1>Temperature: {this.state.main.temp/32*5/9} Celsius</h1>
       </div>
     );
   }
