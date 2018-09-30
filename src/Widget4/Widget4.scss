@@ -1,0 +1,66 @@
+/******************************************
+*******************************************
+                WIDGET3
+*******************************************
+*******************************************/
+
+.widget4 {
+    position: relative;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    width: 300px;
+    height: 58px;
+    background-color: dodgerblue;
+    justify-content: space-between;
+    color: white;
+    border-radius: 5px;
+    
+    .left,
+    .right,
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left {
+        padding-left: 10px;
+    }
+    .middle {
+        background: white; // top: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        div {
+            transform: rotate(5deg);
+            border: 1px solid dodgerblue;
+            background-color: white;
+        }
+        img {
+            height: 75px;
+            width: 75px;
+        }
+    }
+    .right {
+        display: flex;
+        padding-right: 10px;
+        .right--item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        .right--item--first {
+            border-right: 2px solid white;
+            padding-right: 10px;
+        }
+        .right--item--second {
+            padding-left: 10px;
+        }
+    }
+}

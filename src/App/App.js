@@ -3,6 +3,7 @@ import "./App.scss";
 import Widget1 from "./../Widget1/Widget1";
 import Widget2 from "./../Widget2/Widget2";
 import Widget3 from "./../Widget3/Widget3";
+import Widget4 from "./../Widget4/Widget4";
 
 class App extends Component {
   constructor(props) {
@@ -110,7 +111,7 @@ class App extends Component {
         <img src="https://openweathermap.org/img/w/13d.png" alt="empty" />
       );
     }
-    console.log(this.state.icon);
+    console.log(this.state);
     return (
       <div className="App">
         <div className="wrapper">
@@ -137,6 +138,14 @@ class App extends Component {
           />
           <Widget3
             temp={Math.round(Number(this.state.main.temp) - 273.15)}
+            citysel={this.state.citysel}
+            country={this.state.sys.country}
+            icon={this.state.icon}
+          />
+          <Widget4
+            temp_min={Math.round(Number(this.state.main.temp_min) - 273.15)}
+            temp_max={Math.round(Number(this.state.main.temp_max) - 273.15)}
+            weather={this.state.weather.description}
             citysel={this.state.citysel}
             country={this.state.sys.country}
             icon={this.state.icon}

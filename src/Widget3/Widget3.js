@@ -3,7 +3,7 @@ import "./Widget3.scss";
 
 function Widget3(props) {
   return (
-    <div className="widget3">
+    <div className="widget3 widget--item">
       <div className="left">
         <div className="left--inner">
           <p>{props.citysel},</p>

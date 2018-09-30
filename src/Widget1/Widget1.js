@@ -3,7 +3,7 @@ import "./Widget1.scss";
 
 function Widget1(props) {
   return (
-    <div className="widget1">
+    <div className="widget1 widget--item">
       {/* HEADER */}
 
       <div className="header">
