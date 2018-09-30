@@ -1,0 +1,62 @@
+/******************************************
+*******************************************
+                WIDGET2
+*******************************************
+*******************************************/
+
+.widget2 {
+    width: 120px;
+    height: 220px;
+    border-radius: 5px;
+    background-color: lightblue;
+    background-color: dodgerblue;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    /*
+        HEADER ITEM
+    */
+    .header {
+        color: white;
+        
+        text-align: center;
+        padding-top: 4px;
+    }
+    .header--item__one {
+        font-weight: bold;
+    }
+    .header--item__two {
+        padding-bottom: 4px;
+    }
+    /*
+        BODY ITEM
+    */
+    .body {
+        display: flex;
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-size: 50px;
+        p {
+            &:after {
+                content: "\2103";
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        .footer--item--text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            margin-right: 10px;
+        }
+    }
+}

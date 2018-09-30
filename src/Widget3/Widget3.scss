@@ -1,0 +1,37 @@
+/******************************************
+*******************************************
+                WIDGET3
+*******************************************
+*******************************************/
+
+.widget3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 14px;
+    margin-left: 25px;
+    width: 180px;
+    height: 58px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    .left {
+        font-weight: bold;
+        width: 50%;
+        background-color: dodgerblue;
+        color: white;
+    }
+    .left,
+    .middle,
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .middle {
+        width: 25%;
+    }
+    .right {
+        width: 25%;
+        background-color: dodgerblue;
+        color: white;
+    }
+}

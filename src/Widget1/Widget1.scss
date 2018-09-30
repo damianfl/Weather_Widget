@@ -1,0 +1,85 @@
+/******************************************
+*******************************************
+                WIDGET1
+*******************************************
+*******************************************/
+
+.widget1 {
+    font-family: "Space Mono", monospace;
+    width: 300px;
+    height: 236px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* 
+    HEADER
+*/
+    .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: dodgerblue;
+        color: white;
+        padding: 5px;
+    }
+    .header--item__one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* 
+   MAIN
+*/
+    .main {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .main--item__one {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        background-color: dodgerblue;
+        color: white;
+        border-radius: 5px 0 0 5px;
+    }
+    .main--item__two {
+        width: 70%;
+        border: 1px solid dodgerblue;
+        border-radius: 0 5px 5px 0;
+        p {
+            margin: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+        p span :first-child {
+            width: 50%;
+        }
+        p span:nth-child(2) {
+            width: 40%;
+        }
+        .details {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+    /* 
+   WIDGET FOOTER
+*/
+    .userInput input {
+        font-family: "Space Mono", monospace;
+        width: 300px;
+        border: 1px solid dodgerblue;
+        padding: 3px;
+        padding-left: 10px;
+    }
+    .userInput button {
+        width: 300px;
+        border: 0;
+        background-color: dodgerblue;
+        color: white;
+        padding: 3px;
+        cursor: pointer;
+        font-family: "Space Mono", monospace;
+    }
+}
